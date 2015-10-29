@@ -7,7 +7,7 @@ FDTagsView is view which contains many tag content. It supports resetting it's s
 
 ## Preview
 
-![preview](http://7xiamc.com1.z0.glb.clouddn.com/preview.gif)
+![preview](https://github.com/fergusding/FDTagsView/blob/master/preview.png)
 
 # Get started
 

@@ -22,7 +22,7 @@
     if (!_tagLabel) {
         _tagLabel = [[UILabel alloc] initWithFrame:CGRectMake(HorizonPadding, VerticalPadding, self.frame.size.width - HorizonPadding * 2, self.frame.size.height - VerticalPadding * 2)];
         _tagLabel.textAlignment = NSTextAlignmentCenter;
-        [self addSubview:_tagLabel];
+        [self.contentView addSubview:_tagLabel];
         self.layer.cornerRadius = self.frame.size.height / 2;
     }
     
@@ -34,8 +34,8 @@
     self.tagLabel.text = _tagTitle;
 }
 
-- (void)setTagBackgroundColor:(UIColor *)tagBackgroundColor {
-    self.backgroundColor = tagBackgroundColor;
+- (void)setTagBgColor:(UIColor *)tagBgColor {
+    self.backgroundColor = tagBgColor;
 }
 
 - (void)setTagTextColor:(UIColor *)tagTextColor {

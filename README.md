@@ -3,11 +3,12 @@ A view to show some tags.
 
 # Introduction
 
-FDTagsView is view which contains many tag content. It supports resetting it's style, like tag's backgroundcolor, tag's text color, tag's text font and so on. Hope it's helpful for you.
+FDTagsView is view which contains many tag content. You can define two kinds of TagsView by different style, normal and switch. Normal supports resetting it's style, like tag's backgroundcolor, tag's text color, tag's text font. Besides, Switch also supports setting the selected item background color and text font, you can add the deal of the event that every item was clicked, too. Hope it's helpful for you.
 
 ## Preview
 
-![preview](https://github.com/fergusding/FDTagsView/blob/master/preview.png)
+![normal_preview](https://github.com/fergusding/FDTagsView/blob/master/normal_preview.png)
+![switch_preview](https://github.com/fergusding/FDTagsView/blob/master/switch_preview.png)
 
 # Get started
 
@@ -19,18 +20,33 @@ FDTagsView is view which contains many tag content. It supports resetting it's s
 
 ## FDTagsView
 
-- You must init it with frame and set the max height of it.
+- You must init it with frame and it will adapt itself's height automaticly.
+
+## Normal
 
 ```Objective-C
-FDTagsView *tagsView = [[FDTagsView alloc] initWithFrame:CGRectMake(YOU_DEFINE, YOU_DEFINE, YOU_DEFINE, YOU_MAX_HEIGHT)];
-tagsView.tagTitles = @[@"华贵白金", @"自信回头", @"饮水机管理员", @"线霸", @"单身狗", @"手残党", @"背锅侠", @"专业辅助", @"匹配王", @"复仇焰魂", @"走位风骚", @"666666"];
-tagsView.tagBackgroundColor = [UIColor colorWithRed:55 / 255.0 green:196 / 255.0 blue:169 / 255.0 alpha:1];
-tagsView.tagTextColor = [UIColor whiteColor];
-tagsView.tagFontSize = 15;
-[tagsView tagSelected:^(NSString *tag) {
-NSLog(@"%@", tag);
-}];
-[self.view addSubview:tagsView];
+	FDTagsView *tagsView = [[FDTagsView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0) style:FDTagsViewStyleNormal];
+    tagsView.tagTitles = @[@"华贵白金", @"自信回头", @"饮水机管理员", @"线霸", @"单身狗", @"手残党", @"背锅侠", @"专业辅助", @"匹配王", @"复仇焰魂", @"走位风骚", @"666666"];
+    tagsView.tagBgColor = [UIColor colorWithRed:230 / 255.0 green:230 / 255.0 blue:230 / 255.0 alpha:1];
+    tagsView.tagTextColor = [UIColor colorWithRed:136 / 255.0 green:136 / 255.0 blue:136 / 255.0 alpha:1.0];
+    tagsView.tagFontSize = 15;
+    tagsView.backgroundColor = [UIColor colorWithRed:245 / 255.0 green:245 / 255.0 blue:245 / 255.0 alpha:1.0];
+    [self.view addSubview:tagsView];
+```
+
+## Switch
+
+```Objective-C
+	FDTagsView *tagsView = [[FDTagsView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0) style:FDTagsViewStyleSwitch];
+    tagsView.delegate = self;
+    tagsView.tagTitles = @[@"华贵白金", @"自信回头", @"饮水机管理员", @"线霸", @"单身狗", @"手残党", @"背锅侠", @"专业辅助", @"匹配王", @"复仇焰魂", @"走位风骚", @"666666"];
+    tagsView.tagBgColor = [UIColor colorWithRed:230 / 255.0 green:230 / 255.0 blue:230 / 255.0 alpha:1];
+    tagsView.tagTextColor = [UIColor colorWithRed:136 / 255.0 green:136 / 255.0 blue:136 / 255.0 alpha:1.0];
+    tagsView.tagFontSize = 15;
+    tagsView.tagSelectedBgColor = [UIColor orangeColor];
+    tagsView.tagSelectedTextColor = [UIColor whiteColor];
+    tagsView.backgroundColor = [UIColor colorWithRed:245 / 255.0 green:245 / 255.0 blue:245 / 255.0 alpha:1.0];
+    [self.view addSubview:tagsView];
 ```
 
 #License

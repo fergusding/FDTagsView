@@ -6,7 +6,7 @@
 //  Copyright © 2015年 fergusding. All rights reserved.
 //
 
-#define DefaultSpace 5
+#define DefaultSpace 10
 
 #import "FDTagsViewFlowLayout.h"
 
@@ -17,6 +17,7 @@
     CGPoint point = CGPointZero;
     CGSize size = [self.delegate sizeForTagAtIndexPath:indexPath];
     
+    // Create the frame of every cell by caculating
     if (indexPath.item == 0) {
         point = CGPointMake(DefaultSpace, DefaultSpace);
     } else {

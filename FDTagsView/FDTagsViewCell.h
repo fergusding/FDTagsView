@@ -14,7 +14,7 @@
 @interface FDTagsViewCell : UICollectionViewCell
 
 @property (copy, nonatomic) NSString *tagTitle;
-@property (strong, nonatomic) UIColor *tagBackgroundColor;
+@property (strong, nonatomic) UIColor *tagBgColor;
 @property (strong, nonatomic) UIColor *tagTextColor;
 @property (assign, nonatomic) CGFloat tagFontSize;
 

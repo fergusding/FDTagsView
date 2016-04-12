@@ -8,22 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^FDTagsViewSelectBlock)(NSString *tag);
+typedef NS_ENUM(NSUInteger, FDTagsViewStyle) {
+    FDTagsViewStyleNormal,
+    FDTagsViewStyleSwitch,
+};
+
+@protocol FDTagsViewDelegate;
 
 @interface FDTagsView : UIView
 
-// Tags content
-@property (copy, nonatomic) NSArray *tagTitles;
+@property (copy, nonatomic) NSArray *tagTitles;                 // Tags content
+@property (strong, nonatomic) UIColor *tagBgColor;      // Tag's background color
+@property (strong, nonatomic) UIColor *tagTextColor;            // Tag's text color
+@property (assign, nonatomic) CGFloat tagFontSize;              // Tag's text font size
+@property (strong, nonatomic) UIColor *tagSelectedBgColor;      // Selected tag's background color
+@property (strong, nonatomic) UIColor *tagSelectedTextColor;    // Selected tag's text color
+@property (weak, nonatomic) id<FDTagsViewDelegate> delegate;    // TagViews' delegate
 
-// Tag's background color
-@property (strong, nonatomic) UIColor *tagBackgroundColor;
+- (instancetype)initWithFrame:(CGRect)frame style:(FDTagsViewStyle)style;
 
-// Tag's text color
-@property (strong, nonatomic) UIColor *tagTextColor;
+@end
 
-// Tag's text font size
-@property (assign, nonatomic) CGFloat tagFontSize;
+@protocol FDTagsViewDelegate <NSObject>
 
-- (void)tagSelected:(FDTagsViewSelectBlock)block;
+@optional
+- (void)tagsView:(FDTagsView *)tagsView tagSelectedAtIndex:(NSInteger)index;
 
 @end

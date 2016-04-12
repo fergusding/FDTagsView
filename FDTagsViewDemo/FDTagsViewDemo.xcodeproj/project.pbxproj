@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2670C9421CBB9B5B005118DE /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2670C9411CBB9B5B005118DE /* ViewController1.m */; };
+		2670C9451CBB9C79005118DE /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2670C9441CBB9C79005118DE /* TableViewController.m */; };
 		EA36BD3D1BE06209003A524F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD3C1BE06209003A524F /* main.m */; };
 		EA36BD401BE06209003A524F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD3F1BE06209003A524F /* AppDelegate.m */; };
 		EA36BD431BE0620A003A524F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD421BE06209003A524F /* ViewController.m */; };
@@ -15,9 +17,9 @@
 		EA36BD4B1BE0620A003A524F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA36BD491BE0620A003A524F /* LaunchScreen.storyboard */; };
 		EA36BD561BE0620A003A524F /* FDTagsViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD551BE0620A003A524F /* FDTagsViewDemoTests.m */; };
 		EA36BD611BE0620A003A524F /* FDTagsViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD601BE0620A003A524F /* FDTagsViewDemoUITests.m */; };
-		EA36BD781BE063FF003A524F /* FDTagsViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD771BE063FF003A524F /* FDTagsViewFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
-		EA36BD7B1BE06450003A524F /* FDTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD7A1BE06450003A524F /* FDTagsView.m */; settings = {ASSET_TAGS = (); }; };
-		EA36BD7E1BE0654E003A524F /* FDTagsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD7D1BE0654E003A524F /* FDTagsViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		EA36BD781BE063FF003A524F /* FDTagsViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD771BE063FF003A524F /* FDTagsViewFlowLayout.m */; };
+		EA36BD7B1BE06450003A524F /* FDTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD7A1BE06450003A524F /* FDTagsView.m */; };
+		EA36BD7E1BE0654E003A524F /* FDTagsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA36BD7D1BE0654E003A524F /* FDTagsViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2670C9401CBB9B5B005118DE /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		2670C9411CBB9B5B005118DE /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		2670C9431CBB9C79005118DE /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		2670C9441CBB9C79005118DE /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		EA36BD381BE06209003A524F /* FDTagsViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FDTagsViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA36BD3C1BE06209003A524F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA36BD3E1BE06209003A524F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,8 +119,12 @@
 				EA36BD6F1BE06376003A524F /* FDTagsView */,
 				EA36BD3E1BE06209003A524F /* AppDelegate.h */,
 				EA36BD3F1BE06209003A524F /* AppDelegate.m */,
+				2670C9431CBB9C79005118DE /* TableViewController.h */,
+				2670C9441CBB9C79005118DE /* TableViewController.m */,
 				EA36BD411BE06209003A524F /* ViewController.h */,
 				EA36BD421BE06209003A524F /* ViewController.m */,
+				2670C9401CBB9B5B005118DE /* ViewController1.h */,
+				2670C9411CBB9B5B005118DE /* ViewController1.m */,
 				EA36BD441BE0620A003A524F /* Main.storyboard */,
 				EA36BD471BE0620A003A524F /* Assets.xcassets */,
 				EA36BD491BE0620A003A524F /* LaunchScreen.storyboard */,
@@ -294,11 +304,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA36BD781BE063FF003A524F /* FDTagsViewFlowLayout.m in Sources */,
+				2670C9421CBB9B5B005118DE /* ViewController1.m in Sources */,
 				EA36BD431BE0620A003A524F /* ViewController.m in Sources */,
 				EA36BD7B1BE06450003A524F /* FDTagsView.m in Sources */,
 				EA36BD7E1BE0654E003A524F /* FDTagsViewCell.m in Sources */,
 				EA36BD401BE06209003A524F /* AppDelegate.m in Sources */,
 				EA36BD3D1BE06209003A524F /* main.m in Sources */,
+				2670C9451CBB9C79005118DE /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +536,7 @@
 				EA36BD671BE0620A003A524F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA36BD681BE0620A003A524F /* Build configuration list for PBXNativeTarget "FDTagsViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +545,7 @@
 				EA36BD6A1BE0620A003A524F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA36BD6B1BE0620A003A524F /* Build configuration list for PBXNativeTarget "FDTagsViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +554,7 @@
 				EA36BD6D1BE0620A003A524F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
